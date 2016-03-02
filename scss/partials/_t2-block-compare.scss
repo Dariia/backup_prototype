@@ -1,0 +1,252 @@
+.t2-block-compare {
+  padding: rem-calc(60px 0);
+
+  .t2-title {
+    @extend .t2-font-bold;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .t2-compare-phones {
+    display: none;
+    @media #{$medium-up} {
+      display: block;
+    }
+  }
+
+  .t2-phone-img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: rem-calc(30px);
+
+    img {
+      width: 33%;
+    }
+  }
+
+  .t2-phone-brand,
+  .t2-phone-model {
+    font-size: rem-calc(20px);
+  }
+
+  .t2-phone-model {
+    margin-bottom: 30px;
+    color: $t2-color-gray-graphite;
+  }
+
+
+  .t2-compare-head {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    @extend .t2-font-bold;
+    font-size: 20px;
+    border-top: 1px solid $t2-color-gray-antracit;
+
+    @media #{$medium-up} {
+      padding: 0;
+      padding-bottom: 20px;
+      margin-left: 0;
+      margin-right: 0;
+      border-top: none;
+      border-bottom: 1px solid $t2-color-gray-antracit;
+      @include t2-font-regular();
+    }
+  }
+
+  .t2-compare-head-model,
+  .t2-compare-head-title {
+    float: left;
+    width: 50%;
+
+    @media #{$medium-up} {
+      width: auto;
+      float: none;
+    }
+  }
+
+  .t2-compare-head-model {
+    @media #{$medium-up} {
+      display: none;
+    }
+  }
+
+  .t2-compare-head-title {
+    text-align: right;
+
+    @media #{$medium-up} {
+      text-align: inherit;
+    }
+  }
+
+
+  .t2-compare-data-type {
+    margin-bottom: 30px;
+  }
+
+  .t2-compare-data {
+    padding: 16px 0;
+    text-align: center;
+    color: $t2-color-gray-graphite;
+    line-height: 1.4;
+    font-size: rem-calc(14px);
+
+    @media #{$medium-up} {
+      padding: 16px 30px;
+    }
+  }
+
+  .t2-compare-col:nth-child(odd) .t2-compare-data {
+    background: $t2-color-gray-steam;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media #{$medium-up} {
+      background: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .t2-compare-data-key,
+  .t2-compare-data-value {
+    float: left;
+    width: 50%;
+    text-align: left;
+    color: black;
+
+    @media #{$medium-up} {
+      width: auto;
+      text-align: inherit;
+      float: none;
+      color: $t2-color-gray-graphite;
+    }
+  }
+
+  .t2-compare-data-key {
+    @media #{$medium-up} {
+      display: none;
+    }
+  }
+
+  .t2-compare-data-value {
+    text-align: right;
+    font-weight: bold;
+    color: black;
+
+    @media #{$medium-up} {
+      font-weight: normal;
+      color: inherit;
+      text-align: inherit;;
+    }
+  }
+
+  .t2-compare-data,
+  .t2-compare-head,
+  .t2-compare-cols {
+    @include clearfix();
+  }
+
+
+  @media #{$medium-up} {
+
+    .t2-compare-col {
+      float: left;
+      width:25%;
+    }
+
+    .t2-compare-3 .t2-compare-col {
+      width: 30%;
+      &:nth-child(1) {
+        margin-left: 5%;
+      }
+    }
+
+    .t2-compare-2 .t2-compare-col {
+      width: 30%;
+      &:nth-child(1) {
+        margin-left: 20%;
+      }
+    }
+
+    // -compare-1, Only visible in editing mode
+    .t2-compare-1 {
+      .t2-compare-col {
+        width: 30%;
+        margin-left: 20%;
+      }
+
+      .t2-compare-head {
+        padding-bottom: 0;
+        height: 0;
+        font-size: 14px;
+        border-bottom: 1px solid $t2-color-gray-antracit;
+
+        .t2-compare-head-title {
+          position: relative;
+          bottom: -19px;
+        }
+      }
+
+      .t2-compare-data-type {
+        margin: 0;
+      }
+    }
+  }
+
+  @media #{$large-up} {
+
+    .t2-compare-col {
+      float: left;
+      width:25%;
+    }
+
+    .t2-compare-3 .t2-compare-col {
+      width: 25%;
+      &:nth-child(1) {
+        margin-left: 12.5%;
+      }
+    }
+
+    .t2-compare-2 .t2-compare-col {
+      width: 25%;
+      &:nth-child(1) {
+        margin-left: 25%;
+      }
+    }
+  }
+}
+
+.t2-edit-compare {
+	padding: rem-calc(60px 0);
+
+	.t2-edit-compare-block {
+		background: $t2-color-gray-haze;
+		border-radius: 6px;
+		height: 400px;
+		border: 1px solid $t2-color-gray-ash;
+	}
+	.t2-edit-compare-icon {
+		text-align: center;
+		padding: 60px 30px 30px;
+		i  {
+			font-size: 180px;
+			color: $t2-color-gray-ash;
+		}
+	}
+	.t2-edit-compare-title {
+		padding: 0 20px;
+		@extend .t2-font-bold;
+		text-align: center;
+		font-size: rem-calc(20px);
+	}
+
+  .columns:last-child {
+    float: left;
+  }
+
+}

@@ -1,0 +1,313 @@
+.t2-block-custom-form {
+  padding: rem-calc(30px 0);
+
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    color: $t2-color-gray-graphite;
+    padding: 5px 10px;
+    height: 42px;
+    box-shadow: inset 0 1px 2px rgba(black, .1);
+    line-height: 42px;
+    margin-bottom: 0;
+    &:focus {
+      box-shadow: inset 0 1px 2px rgba(black, .1);
+    }
+  }
+
+  textarea {
+    line-height: 1.3;
+    height: 100px;
+  }
+
+  select {
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 -1px 2px rgba(black, .1);
+  }
+
+  .t2-form-input-text,
+  .t2-form-input-email,
+  .t2-form-input-checkbox,
+  .t2-form-input-label,
+  .t2-form-input-radio,
+  .t2-form-textarea,
+  .t2-form-button,
+  .t2-form-radio-group,
+  .t2-form-select {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  label {
+    font-weight: bold;
+    @include t2-userSelectNone();
+    & + * {
+      margin-top: 5px;
+    }
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    legend {
+      background: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  // .t2-form-input-label {
+  //   border-top: 1px solid $t2-color-gray-ash;
+  //   padding-top: 20px;
+  //   & + .t2-form-input-radio {
+  //     margin-top: 10px
+  //   }
+  // }
+
+  .t2-form-required {
+    label:after {
+      content: " *";
+      color: $t2-color-pantone-185;
+    }
+  }
+
+  .t2-form-error {
+    color: $t2-color-pantone-185;
+    font-style: italic;
+    font-size: rem-calc(13px);
+    display: none;
+    padding: 7px 0 0 25px;
+    position: relative;
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      background: $t2-color-pantone-185;
+      position: absolute;
+      left: 10px;
+    }
+
+    &:before {
+      width: 10px;
+      height: 1px;
+      top: 13px;
+    }
+
+    &:after {
+      width: 1px;
+      height: 13px;
+      top: 0;
+    }
+
+    @media #{$medium-up} {
+      & {
+        padding-top: 0;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .t2-form-radio-group .t2-form-error { top: 25px; }
+  .t2-form-input-checkbox .t2-form-error {
+    top: -8px;
+
+    @media #{$medium-up} {
+      top: -1px;
+    }
+  }
+
+  .js-submited [required] + .t2-form-error,
+  .ng-touched.ng-invalid  + .t2-form-error,
+  input[type="checkbox"].ng-valid-parse.ng-invalid + input + label + .t2-form-error,
+  &.js-submited input[type="checkbox"].ng-invalid + input + label + .t2-form-error  {
+    display: block;
+  }
+
+  &.js-submited {
+    [required].ng-valid + .t2-form-error,
+    .ng-touched.ng-valid + .t2-form-error,
+    input[type="checkbox"].ng-valid + input + label + .t2-form-error {
+      display: none;
+    }
+  }
+
+  .t2-form-radio-group {
+    border: solid $t2-color-gray-ash;
+    border-width: 1px 0;
+    padding-bottom: 20px;
+  }
+
+  .t2-form-input-radio,
+  .t2-form-input-checkbox {
+    input {display: none;}
+    label {
+      position: relative;
+      padding-left: 24px;
+      margin-left: 0;
+      &:before {
+        content: " ";
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-top: -9px;
+        position: absolute;
+
+        border-radius: 2px;
+        border: 1px solid $t2-color-gray-ash;
+        box-shadow: inset 0 1px 2px rgba(black, .1);
+        left: 0;
+        top: 50%;
+      }
+    }
+
+  }
+
+  .t2-form-input-radio {
+    label {
+      font-weight: normal;
+      &:before {
+        border-radius: 8px;
+      }
+      &:after {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin: -5px 0 0 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background: $t2-color-black;
+        display: none;
+      }
+    }
+    input:checked + label:after {display: block;}
+    & + .t2-form-input-radio {
+      margin-top: 0;
+    }
+  }
+  .t2-form-input-label + .t2-form-input-radio {margin-top: 10px;}
+
+  .t2-form-input-checkbox {
+    label {
+      font-weight: normal;
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin: -10px 0 0 2px;
+        content: "\e8ba";
+        font-family: 't2-iconic';
+        font-size: 13px;
+        color: $t2-color-black;
+        display: none;
+      }
+    }
+    input:checked + input + label:after {display: block;}
+
+    & + .t2-form-input-checkbox {
+      margin-top: 0;
+    }
+  }
+
+
+
+  // Any element following a set of radio buttons
+  // .t2-form-input-radio + *:not(.t2-form-input-radio) {
+  //   padding-top: 20px;
+  //   margin-top: 20px;
+  //   border-top: 1px solid $t2-color-gray-ash;
+  // }
+
+
+  .t2-form-thankyou {
+    //display: none;
+  }
+  .t2-form-thankyou-heading {
+    @extend .t2-font-bold;
+    font-size: rem-calc(32px);
+    margin-bottom: 20px;
+  }
+  .t2-form-thankyou-body {
+    min-height: 400px;
+  }
+  .t2-form-thankyou-error {
+    .t2-form-thankyou-body  {
+      min-height:0;
+      margin-bottom: 40px;
+    }
+    .t2-form-thankyou-heading {
+      font-size: rem-calc(24px);
+      color: $t2-color-red;
+    }
+  }
+
+  .t2-form-loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#fff,0.8);
+    opacity: 0;
+    z-index:-100;
+
+  }
+  &.load .t2-form-loader {
+    opacity: 1;
+    z-index: 100;transition: opacity 200ms ease-in-out;
+  }
+  .t2-form-loader-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid $t2-color-gray-dark-concrete;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 30px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin: -30px 0 0 -30px;
+    @include t2-animation(customFormSpinner 500ms infinite);
+
+    @media #{$medium-up} {
+      & {top: 30%;}
+    }
+  }
+
+}
+
+.t2-custom-form-edit {
+  padding: rem-calc(30px 0);
+
+  .t2-form-export {
+    margin-top: 20px;
+    background: $t2-color-gray-steam;
+    border: 1px solid $t2-color-gray-fog;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    strong {
+      padding-top: 11px;
+      display: inline-block;
+    }
+
+    button {
+      float: right;
+    }
+  }
+
+}
+@include t2-keyframes(customFormSpinner) {
+  0% {@include transform(rotate(0deg))}
+  100% {@include transform(rotate(360deg))}
+}

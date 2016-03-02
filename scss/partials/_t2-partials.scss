@@ -1,0 +1,111 @@
+//global
+@import "t2-global-body";
+@import "t2-global-forms";
+@import "t2-global-validation";
+@import "t2-global-forms-xforms";
+@import "t2-global-icons";
+@import "t2-global-buttons";
+@import "t2-global-editorial";
+@import "t2-global-navigation";
+@import "t2-global-navigation-megamenu";
+@import "t2-global-slideshow";
+@import "t2-global-dashboard";
+@import "t2-global-lists";
+@import "t2-global-404";
+@import "t2-global-search-autocomplete";
+@import "t2-global-notifications";
+@import "t2-global-block";
+@import "t2-global-headings";
+@import "t2-global-password-strength-indicator";
+
+//pages
+@import "t2-page-faq";
+@import "t2-page-article";
+@import "t2-page-category";
+@import "t2-page-discover";
+@import "t2-page-store";
+@import "t2-page-account";
+@import "t2-page-account-invoice";
+@import "t2-page-account-settings";
+@import "t2-page-account-services";
+@import "t2-page-account-expenditure";
+@import "t2-page-account-expenditure-slider";
+@import "t2-page-account-overview";
+@import "t2-page-account-add-contract";
+@import "t2-page-account-about";
+//@import "legacy/t2-page-login";
+@import "t2-page-timeflow";
+@import "t2-page-coverage-map";
+@import "t2-page-order-status";
+@import "t2-page-add-data";
+@import "t2-page-search";
+@import "t2-page-start";
+@import "t2-page-support";
+@import "t2-page-support-contact-call";
+@import "t2-page-chat";
+@import "t2-page-support-retrieve-mms";
+@import "t2-page-stoppage";
+@import "t2-page-account-change-subscription";
+@import "t2-page-mobilsurfvaljaren";
+@import "t2-page-viaplay";
+@import "t2-page-insta";
+// @import "t2-page-mt2-start";
+@import "t2-page-orderstatus";
+
+//blocks
+@import "t2-block-discover-editorial";
+@import "t2-block-discover-products";
+@import "t2-block-discover-columns";
+@import "t2-block-discover-gallery";
+@import "t2-block-discover-menu";
+@import "t2-block-video";
+@import "t2-block-three-col-service-push";
+@import "t2-block-three-col-link-list";
+@import "t2-block-two-col-product-push";
+@import "t2-block-account-contract-selector";
+@import "t2b-block-contact-sales";
+@import "t2-block-discover-two-col-text";
+@import "t2-block-two-four-col-subscription";
+@import "t2b-block-contact";
+@import "t2-block-interest-form";
+@import "t2-block-rss";
+@import "t2-block-store-account-manager";
+@import "t2-block-xform";
+@import "t2-block-payback";
+@import "t2-block-discover-video";
+@import "t2-block-abroad";
+@import "t2-block-sparrtjanst";
+@import "t2-block-socialmedia";
+@import "t2-block-twitter";
+@import "t2-block-from-abroad";
+@import "t2-block-countdown";
+@import "t2-block-custom-form";
+@import "t2-block-compare";
+@import "t2-block-data-packages";
+@import "t2-block-audio";
+
+//Magento
+@import "t2-magento-global-icons";
+@import "t2-magento-general";
+@import "t2-magento-product-listing";
+@import "t2-magento-standalone-addon-listing";
+@import "t2-magento-summary-table";
+@import "t2-magento-payback-form_new";
+@import "t2-magento-products";
+@import "t2-business-magento-products";
+@import "t2-res-magento-products";
+@import "t2-magento-cart";
+@import "t2-business-magento-cart";
+@import "t2-res-magento-cart";
+@import "t2-magento-configurators";
+@import "t2-magento-brandpage";
+@import "t2-magento-csr-login";
+@import "t2-magento-general-fix";
+
+//Add new partials at the bottom
+
+//Component
+@import "t2-component-employee";
+
+//Campaign
+@import "t2-campaign";

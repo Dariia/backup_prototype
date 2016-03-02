@@ -1,0 +1,25 @@
+#t2-magento-cart-step-person {
+    .t2-magento-select {
+        width:100%;
+        select {
+            width:100% !important;
+            z-index:10;
+        }
+    }
+    b {
+        color:$t2-color-gray-graphite;
+    }
+    .t2-magento-cart-address-list {
+        padding-bottom:15px;
+        overflow:hidden;
+        .columns {
+            float:left !important;
+            margin-bottom:10px;
+            .t2-magento-bordered-block {
+                word-break: break-all;
+                font-size:rem-calc(14);
+                font-weight:bold;
+            }
+        }
+    }
+}

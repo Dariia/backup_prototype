@@ -1,0 +1,18 @@
+.t2-block-countdown {
+  padding: rem-calc(55px 0);
+
+  .t2-heading {
+    @extend .t2-font-bold;
+    font-size: rem-calc(28px);
+    text-align: center;
+  }
+
+  .t2-countdown-clock {
+    @extend .t2-font-heavy;
+    font-size: rem-calc(40px);
+    text-align: center;
+  }
+
+  .t2-heading + .t2-countdown-clock {padding-top: rem-calc(35px);}
+
+}

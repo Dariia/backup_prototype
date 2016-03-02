@@ -1,0 +1,15 @@
+css/app.css
+*.css
+test.php
+
+assets/js/script.js
+
+scan.php
+
+prototype.php
+
+npm-debug.log
+
+bower_components/
+
+node_modules/

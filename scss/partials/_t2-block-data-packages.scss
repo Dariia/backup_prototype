@@ -1,0 +1,197 @@
+.t2-data-packages-block {
+
+  .t2-step {
+    padding-top: rem-calc(80px);
+    padding-bottom: rem-calc(30px);
+    &[id] {
+      display: none;
+      &.t2-active {
+        display: block;
+      }
+    }
+  }
+
+  .t2-step-heading {
+    overflow: hidden; //clearfix
+    border-bottom: 1px solid $t2-color-gray-light;
+    padding-bottom: 24px;
+
+    h2.t2-heading {
+      font-size: rem-calc(20px);
+      float: left;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .t2-step-heading-num {
+    width: 25px;
+    height: 25px;
+    border: 2px solid $t2-color-gray-dark-concrete;
+    border-radius: 25px;
+    text-align: center;
+    font-size: rem-calc(12px);
+    font-weight: 700;
+    color: $t2-color-gray-dark-concrete;
+    line-height: rem-calc(21px);
+    position: relative;
+    float: left;
+    margin-right: 15px;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 2px;
+      height:9px;
+      background: $t2-color-gray-dark-concrete;
+      position: absolute;
+      left: 50%;
+      bottom: -11px;
+      margin-left: -1px;
+    }
+  }
+
+  .row.t2-step-content {
+    padding: rem-calc(40px 0);
+  }
+
+  @media #{$medium-up} {
+    .row.t2-step-content {
+      padding: rem-calc(40px) !important; // !important override foundation behaviour
+    }
+  }
+
+  .t2-editorial {
+    //font-size: 0.875rem;
+    line-height: 1.7em;
+  }
+
+  .t2-select-data {
+
+    padding-top: rem-calc(40px);
+
+    .t2-button {
+      text-align: center;
+      position: relative;
+      width: 100%;
+      padding: rem-calc(28px) $t2-size-small;
+      font-weight: 700 !important;
+      transition: background-color 0.15s ease-in-out;
+
+      .t2-amount {
+          display: block;
+          font-size: rem-calc(26);
+          line-height: rem-calc(22);
+          color: $t2-color-gray-graphite;
+      }
+      &.t2-active,
+      &:hover,
+      &:active {
+        border-color: $t2-color-gray-graphite;
+        box-shadow: 0 0 10px 0 rgba(#000,.2);
+        &, span { color: $t2-color-gray-graphite; }
+      }
+      &.t2-active {
+        border-width: 3px;
+        padding: rem-calc(27px) $t2-size-small;
+        cursor: default;
+      }
+
+      @media #{$large-up} {
+        &.t2-active:after {
+          content: "";
+          display: block;
+          width: 30px;
+          height: 30px;
+          border: 15px solid transparent;
+          border-bottom-color: $t2-color-gray-steam;
+          position: absolute;
+          left: 50%;
+          margin-left: -15px;
+          bottom: -53px;
+        }
+      }
+
+      &.t2-background-color-pantone-2603,
+      &.t2-background-color-pantone-black,
+      &.t2-background-color-pantone-185,
+      &.t2-background-color-pantone-300,
+      &.t2-background-color-pantone-magenta {
+        .t2-amount {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+
+  .t2-step-list {
+    list-style: none;
+    margin: 0 0 40px;
+    padding: 0;
+
+    li {
+      margin-bottom: rem-calc(18px);
+    }
+
+    i {
+      margin-right: rem-calc(10px);
+      font-size: 18px;
+      position: relative;
+      top: 2px;
+      display: inline-block;
+    }
+
+  }
+
+}
+
+.t2-edit-data-package {
+  padding: rem-calc(60px 0);
+
+  .t2-edit-data-package-block {
+		background: $t2-color-gray-haze;
+		border-radius: 6px;
+		min-height: 300px;
+		border: 1px solid $t2-color-gray-ash;
+    padding: 20px 20px;
+
+    &.t2-active {
+      border: 2px solid #000;
+      padding: 19px;
+      box-shadow: 0 10px 30px rgba(#000,0.2);
+    }
+	}
+
+  .t2-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+  .t2-editorial {
+    font-size: 13px;
+    word-wrap: break-word;
+    display: none;
+  }
+
+  .t2-step-list {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 13px;
+    list-style: none;
+
+
+    li {
+      border-bottom: 1px solid $t2-color-gray-ash;
+      padding: 5px 0;
+      &:nth-last-child(1) {
+        border: none;
+      }
+    }
+
+  }
+
+}
